@@ -5,7 +5,7 @@ import { makeStyles } from '@mui/styles';
 import gg from '../../../static/gg.png';
 import fb from '../../../static/fb.png';
 
-import LoginForm from './Form';
+import SignUpForm from './Form';
 
 const useStyles = makeStyles(() => ({
     box:{
@@ -32,9 +32,9 @@ export default function Form(){
     return(
         <Box className={classes.box} >
             <Paper elevation={0} >
-                <Grid container spacing={4} >
+                <Grid container spacing={3} >
                     <Grid item xs={12}>
-                        <Typography className={classes.text} >Sign in to HorusBLOCK</Typography>
+                        <Typography className={classes.text} >Sign up to HorusBLOCK</Typography>
                     </Grid>
                     <Grid item xs={12} >
                         <Grid container  sx={{    justifyContent: "space-between"}}>
@@ -62,11 +62,10 @@ export default function Form(){
                         <Divider sx={{width:"45%"}}/>
                     </Grid>
                     <Grid item xs={12} sx={{justifyContent: "center",display: "flex",}}>
-                        <LoginForm/>
+                        <SignUpForm/>
                     </Grid>
                     <Grid item xs={12} sx={{display: "flex",justifyContent: "center",}}>
-                        <Typography sx={{marginRight:"10px"}}>Not a member? </Typography>
-                        <Typography sx={{color:"rgba(255, 189, 53, 0.6)"}}>Sign up now</Typography>
+                        <Typography sx={{color:"rgba(255, 189, 53, 0.6)"}}>Sign in instead</Typography>
                     </Grid>
                 </Grid>
             </Paper>
