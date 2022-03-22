@@ -45,7 +45,7 @@ function InputField(props) {
                     formState, }) => {
                     return (
                       <> 
-                        <InputLabel sx={{fontStyle: "normal",textAlign:"left",fontWeight:"400",fontFamily: 'Rubik',fontSize: "16px"}}>{label}</InputLabel>
+                        <InputLabel sx={{color:"#222832",fontStyle: "normal",textAlign:"left",fontWeight:"bold",fontFamily: 'Rubik',fontSize: "16px"}}>{label}</InputLabel>
                         <TextField
                             onBlur={onBlur}
                             onChange={onChange}

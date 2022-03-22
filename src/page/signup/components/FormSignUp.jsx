@@ -4,7 +4,7 @@ import Divider from '@mui/material/Divider';
 import { makeStyles } from '@mui/styles';
 import gg from '../../../static/gg.png';
 import fb from '../../../static/fb.png';
-
+import { Link } from 'react-router-dom';
 import SignUpForm from './Form';
 
 const useStyles = makeStyles(() => ({
@@ -65,7 +65,7 @@ export default function Form(){
                         <SignUpForm/>
                     </Grid>
                     <Grid item xs={12} sx={{display: "flex",justifyContent: "center",}}>
-                        <Typography sx={{color:"rgba(255, 189, 53, 0.6)"}}>Sign in instead</Typography>
+                     <Link to="/login" style={{textDecoration:"none"}}><Typography sx={{color:"rgba(255, 189, 53, 0.6)"}}>Sign in instead</Typography></Link>    
                     </Grid>
                 </Grid>
             </Paper>

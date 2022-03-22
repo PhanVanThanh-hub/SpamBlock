@@ -55,7 +55,7 @@ function PasswordField(props) {
                     formState, }) => {
                     return (
                         <>
-                        <InputLabel sx={{fontStyle: "normal",textAlign:"left",fontWeight:"400",fontFamily: 'Rubik',fontSize: "16px"}}  error={!!hasError}>{label}</InputLabel> 
+                        <InputLabel sx={{color:"#222832",fontStyle: "normal",textAlign:"left",fontWeight:"bold",fontFamily: 'Rubik',fontSize: "16px"}}  error={!!hasError}>{label}</InputLabel> 
                         <FormControl className={clsx(classes.margin, classes.textField)} variant="outlined" fullWidth>
                              
                             <OutlinedInput
