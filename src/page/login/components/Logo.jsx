@@ -13,7 +13,7 @@ const useStyles = makeStyles(() => ({
     flexDirection:"column"
    },
    paper:{
-    background:"transparent",
+ 
     flexDirection:"row",
     display:"flex",
     alignItems:"center",
@@ -22,7 +22,7 @@ const useStyles = makeStyles(() => ({
    text:{
     fontWeight:"500",
     fontFamily:"Rubik",
-    fontSize:"50px",
+    fontSize:"30px",
     lineHeight:"59.25px",
     fontStyle: "normal",
     color:"white"
@@ -32,7 +32,7 @@ export default function Logo(){
     const classes = useStyles()
     return(
         <Box  className={classes.box}  >
-            <Paper className={classes.paper} elevation={0} >
+            <Paper className={classes.paper} elevation={0} sx={{background: "transparent",}} >
                 <CardMedia component="img" sx={{width:"154px",  height:"152px"}}
              image={logo}
              alt="Paella dish"/>
