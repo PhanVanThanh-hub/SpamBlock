@@ -1,18 +1,17 @@
 import { yupResolver } from '@hookform/resolvers/yup';
-import {Button,Box,Typography} from '@mui/material';
+import {Button,Typography} from '@mui/material';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
 import * as yup from "yup";
 import InputField from '../../../components/FormFiled/InputField';
 import PasswordField from '../../../components/FormFiled/PasswordField';
+import {useHistory} from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { login } from '../../../redux/auth/slice';
 
-
- 
 function LoginForm(props) {
-
-    const { onSubmit ,setVisibleLogin } = props
-
+    const history = useHistory();
+    const dispatch = useDispatch()
     const schema = yup.object().shape({
         username: yup.string().required("Xin vui lòng nhập username"),
         password: yup.string().required("Xin vui lòng nhập mật khẩu")
@@ -26,8 +25,10 @@ function LoginForm(props) {
         resolver: yupResolver(schema),
     });
 
-    const handleSubmit = (values) => {
-         console.log("values:",values)
+    const handleSubmit = async() => {
+        const actions = login()
+        await dispatch(actions)
+        return history.replace('/');
     }
 
     
@@ -46,7 +47,7 @@ function LoginForm(props) {
                         style={{ width: "100%" ,background: "#FFBD35",borderRadius: "8px",textTransform: "capitalize",}}
                     >
                        <Typography sx={{color:"white"}}>
-                       Sing in
+                       Login
                        </Typography>
                          
                     </Button>

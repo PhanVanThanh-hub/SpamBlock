@@ -1,7 +1,5 @@
 import React from "react";
 import Box from "@mui/material/Box";
- 
-import Header from "../../../components/Header/index";
 import imgForgotPassword from '../../../static/forgotPassword.jpg';
 import ModalResetPassword from '../components/Main';
 export default function ForgotPasswordPage() {
@@ -17,7 +15,7 @@ export default function ForgotPasswordPage() {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         width: '100vw',
-        height: '100vh'
+         
       }}
     >
     

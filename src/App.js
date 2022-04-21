@@ -8,15 +8,22 @@ import LoginPage from './page/login/page/index';
 import SignUpPage from './page/signup/page/index';
 import ForgotPasswordPage from './page/forgotPassword/page/index';
 import Header from './components/Header/index';
-function App() {
+import LandingPage from './page/landingPage/page/index';
+import ChooseSocialNetwork from './page/chooseSocialNetwork/page/index';
  
-  
+
+function App() {
 
   return (
-    <div className="App">
-     
+ 
+    <div className='App'> 
       <ScrollToTop>
           <Switch>
+          <Route path="/choose_social_network">
+              <Header/>
+              <ChooseSocialNetwork/>
+              
+            </Route>
             <Route path="/login">
               <LoginPage />
             </Route>
@@ -27,9 +34,15 @@ function App() {
               <Header/> 
               <ForgotPasswordPage />
             </Route>
+             
+            <Route path="/">
+              <Header/> 
+              <LandingPage />
+            </Route>
+             
           </Switch>
       </ScrollToTop>
-    </div>
+      </div> 
   );
 }
 

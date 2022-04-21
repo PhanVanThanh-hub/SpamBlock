@@ -1,16 +1,15 @@
 import { yupResolver } from '@hookform/resolvers/yup';
-import {Button, Typography,Grid,Checkbox  } from '@mui/material';
+import {Button, Typography,Grid  } from '@mui/material';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import * as yup from "yup";
 import InputField from '../../../components/FormFiled/InputField';
 import PasswordField from '../../../components/FormFiled/PasswordField';
 import CheckboxField from '../../../components/FormFiled/CheckBoxField';
+import {useHistory} from 'react-router-dom';
 
- 
 function SignUpForm(props) {
-
-    const { onSubmit ,setVisibleLogin } = props
+    const history = useHistory();
 
     const schema = yup.object().shape({
         firstName:yup.string().required("Xin vui lòng nhập first name"),
@@ -34,7 +33,8 @@ function SignUpForm(props) {
     });
 
     const handleSubmit = (values) => {
-         console.log("values:",values)
+ 
+        return history.replace('/login');
     }
 
     
